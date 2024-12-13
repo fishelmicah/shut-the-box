@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>Shut the Box</title>
+        <link rel="shortcut icon" href="PICTURE" type="image/x-icon">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <script src= "./game.js" defer></script>
+    </head>
+    <body>
+        <div class='players'>
+            <h1 class= 'header'>Shut the Box!</h1>
+            <input id="text-input1" type="text" placeholder="player 1's name" autofocus autocomplete="off">
+            <input id="text-input2" type="text" placeholder="player 2's name" autofocus autocomplete="off">
+            <button id="start-game">start game</button>
+        </div>
+        <div class='board'>
+            <h1 class='header-board'>Shut the Box!</h1>
+            <div class='game-info'>
+                <p class='player-name'>Player 1's Turn</p>
+                <p class='round' id='round'>round 1</p>
+            </div>
+            <div class='game-board' class= 'p1'>
+                <p class='board-numbers' id='card1'>1</p>
+                <p class='board-numbers' id='card2'>2</p>
+                <p class='board-numbers' id='card3'>3</p>
+                <p class='board-numbers' id='card4'>4</p>
+                <p class='board-numbers' id='card5'>5</p>
+                <p class='board-numbers' id='card6'>6</p>
+                <p class='board-numbers' id='card7'>7</p>
+                <p class='board-numbers' id='card8'>8</p>
+                <p class='board-numbers' id='card9'>9</p>
+            </div>
+            <div class='dice'>
+                <i class="bi bi-dice-1-fill" id='dice1'></i>
+                <i class="bi bi-dice-4-fill" id='dice2'></i>
+                <div class="button-functions">
+                    <button id='roll'>roll</button>
+                    <button disabled id='individual'>individual dice</button>
+                    <button disabled id='sum'>sum of the dice</button>
+                    <button disabled id='end-turn'>end turn</button>
+                </div>
+            </div>
+            <div id="table">
+                <table>
+                    <thead>
+                        <tr> <!--table row-->
+                            <th></th>
+                            <th id="p1name">Player 1</th> <!--table head-->
+                            <th id="p2name">Player 2</th> <!--table head-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="tot-points">
+                            <th>total points</th>
+                            <td id="player1-total-points">0</td>
+                            <td id="player2-total-points">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="game-over">
+            <h1 class="header-gameover">Shut the Box!</h1>
+            <h2 class="game-over-body">GAME OVER</h2>
+            <h3 class="winner"></h3>
+            <div class='end-points'>
+                <p class = "p1-end-points"></p>
+                <p class = "p2-end-points"></p>
+            </div>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </body>
+</html>
